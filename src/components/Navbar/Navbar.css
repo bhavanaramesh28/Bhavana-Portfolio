@@ -1,0 +1,116 @@
+/* Navbar */
+
+.navbar-container {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: #1B4F72;
+}
+
+.navbar {
+    width: 90%;
+    margin: auto;
+    height: 75px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h2 {
+    color: white;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+/* Navigation */
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #F18F01;
+}
+
+/* Buttons */
+
+.nav-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.theme-btn,
+.menu-btn {
+    border: none;
+    cursor: pointer;
+    background: transparent;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.menu-btn {
+    display: none;
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    .menu-btn {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 75px;
+        left: -100%;
+        width: 100%;
+        background: #1B4F72;
+
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+        padding: 25px 0;
+
+        transition: 0.4s;
+    }
+
+    .nav-links.active {
+        left: 0;
+    }
+}
+
+/* Dark Theme */
+
+body[data-theme="dark"] {
+    background: #121212;
+    color: white;
+}
+
+body[data-theme="dark"] .navbar-container {
+    background: #1a1a1a;
+}
+
+body[data-theme="dark"] .nav-links {
+    background: #1a1a1a;
+}
+
+body[data-theme="dark"] .nav-links a {
+    color: white;
+}
+
+body[data-theme="dark"] .nav-links a:hover {
+    color: #F18F01;
+}

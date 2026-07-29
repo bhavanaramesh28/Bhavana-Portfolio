@@ -1,0 +1,86 @@
+/* Footer */
+
+.footer {
+    background: #1B4F72;
+    color: white;
+    padding: 30px 10%;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Left */
+
+.footer-left h3 {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+}
+
+.footer-left p {
+    color: #d9d9d9;
+}
+
+/* Center */
+
+.footer-center {
+    text-align: center;
+    color: #e5e5e5;
+    line-height: 1.6;
+}
+
+/* Right */
+
+.footer-right {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-right a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.footer-right a:hover {
+    color: #F18F01;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-right {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+/* Dark Theme */
+
+body[data-theme="dark"] .footer {
+    background: #0f172a;
+}
+
+body[data-theme="dark"] .footer-left p,
+body[data-theme="dark"] .footer-center {
+    color: #cccccc;
+}
+
+body[data-theme="dark"] .footer-right a {
+    color: #ffffff;
+}
+
+body[data-theme="dark"] .footer-right a:hover {
+    color: #F18F01;
+}

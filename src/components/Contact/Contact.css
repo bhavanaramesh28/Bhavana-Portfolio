@@ -1,0 +1,145 @@
+/* Contact Section */
+
+.contact {
+    padding: 80px 10%;
+    background: #f4f6f8;
+}
+
+.contact-container {
+    max-width: 700px;
+    margin: auto;
+}
+
+.contact h2 {
+    text-align: center;
+    color: #1B4F72;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.contact-text {
+    text-align: center;
+    margin-bottom: 35px;
+    color: #555;
+    line-height: 1.7;
+}
+
+/* Form */
+
+.contact-form {
+    background: #ffffff;
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #1B4F72;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 14px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: 0.3s;
+    font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #1B4F72;
+    box-shadow: 0 0 5px rgba(27,79,114,0.3);
+}
+
+/* Button */
+
+.contact-btn {
+    width: 100%;
+    background: #1B4F72;
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: 600;
+}
+
+.contact-btn:hover {
+    background: #F18F01;
+}
+
+/* Success Message */
+
+.success {
+    margin-top: 20px;
+    text-align: center;
+    color: green;
+    font-weight: bold;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+
+    .contact {
+        padding: 60px 20px;
+    }
+
+    .contact h2 {
+        font-size: 2rem;
+    }
+
+    .contact-form {
+        padding: 25px;
+    }
+}
+
+/* Dark Theme */
+
+body[data-theme="dark"] .contact {
+    background: #121212;
+}
+
+body[data-theme="dark"] .contact-form {
+    background: #242424;
+}
+
+body[data-theme="dark"] .contact h2,
+body[data-theme="dark"] .contact-text,
+body[data-theme="dark"] label {
+    color: #ffffff;
+}
+
+body[data-theme="dark"] input,
+body[data-theme="dark"] textarea {
+    background: #333;
+    color: white;
+    border: 1px solid #555;
+}
+
+body[data-theme="dark"] input::placeholder,
+body[data-theme="dark"] textarea::placeholder {
+    color: #bbb;
+}
+
+body[data-theme="dark"] .contact-btn {
+    background: #F18F01;
+}
+
+body[data-theme="dark"] .contact-btn:hover {
+    background: #ffffff;
+    color: #121212;
+}
