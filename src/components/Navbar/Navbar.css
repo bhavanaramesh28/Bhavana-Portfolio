@@ -1,6 +1,7 @@
 /* Navbar */
 
 .navbar-container {
+    color: black;
     position: sticky;
     top: 0;
     width: 100%;
@@ -9,6 +10,7 @@
 }
 
 .navbar {
+    color: black;
     width: 90%;
     margin: auto;
     height: 75px;
@@ -55,7 +57,7 @@
     border: none;
     cursor: pointer;
     background: transparent;
-    color: white;
+    color:black;
     font-size: 1.5rem;
 }
 

@@ -8,7 +8,7 @@ function About() {
 
         <div className="about-image">
           <img
-            src={photo.jpeg}
+            src="photo.jpeg"
             alt="Bhavana Ramesh"
           />
         </div>

@@ -1,5 +1,6 @@
 import "./Hero.css";
 
+
 function Hero() {
   const hour = new Date().getHours();
 
@@ -44,7 +45,7 @@ function Hero() {
         </div>
 
         <div className="hero-image">
-          <img src={photo.jpeg} alt="Bhavana Ramesh" />
+          <img src="/photo.jpeg" alt="Bhavana Ramesh" />
         </div>
 
       </div>

@@ -30,7 +30,7 @@ function Projects() {
       title: "Todo App",
       description:
         "A simple task management application using React Hooks.",
-      image: "WeatherApps-logo.jpg",
+      image: "/WeatherApps-logo.jpg",
       category: "web",
       tech: ["React", "JavaScript"],
       github: "https://github.com/bhavanaramesh28",
@@ -83,8 +83,8 @@ function Projects() {
             <div className="project-card" key={project.id}>
 
               <img
-                src={project.image}
-                alt={project.title}
+                src="WeatherApps logo.jpg"
+                alt="project.title"
               />
 
               <div className="project-content">

@@ -1,6 +1,6 @@
-import "./Skill.css";
+import "./Skills.css";
 
-function Skill() {
+function Skills() {
   const skills = [
     { name: "HTML", level: 95 },
     { name: "CSS", level: 90 },
@@ -45,4 +45,4 @@ function Skill() {
   );
 }
 
-export default Skill;
+export default Skills;
