@@ -9,6 +9,7 @@ import Footer from './components/Footer/Footer'
 
 
 
+
 function App() {
   const [count, setCount] = useState(0)
 
@@ -21,6 +22,7 @@ function App() {
        <Projects />
        <Contact />
        <Footer />
+       
     </>
   )
 }
