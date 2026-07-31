@@ -16,10 +16,10 @@ function Projects() {
     },
     {
       id: 2,
-      title: "Portfolio Website",
+      title: "Marvel Spider Man Game",
       description:
-        "A personal portfolio website showcasing projects and skills.",
-      image: "/WeatherApps-logo.jpg",
+        "Marvel's Spider-Man is an action-adventure video game featuring smooth web-slinging mechanics, an open-world New York City, and a cinematic story about an experienced Peter Parker",
+      image: "Spider man.jpeg",
       category: "design",
       tech: ["HTML", "CSS", "JavaScript"],
       github: "https://github.com/bhavanaramesh28",
@@ -27,10 +27,10 @@ function Projects() {
     },
     {
       id: 3,
-      title: "Todo App",
+      title: "Health Care App",
       description:
-        "A simple task management application using React Hooks.",
-      image: "/WeatherApps-logo.jpg",
+        "A healthcare app is a digital mobile tool designed to manage health and medical needs, commonly featuring telemedicine consultations, health data tracking, and medication reminders.",
+      image: "public/Health care.jpeg",
       category: "web",
       tech: ["React", "JavaScript"],
       github: "https://github.com/bhavanaramesh28",
