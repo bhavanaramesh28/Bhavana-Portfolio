@@ -18,7 +18,7 @@ function Projects() {
       id: 2,
       title: "Marvel Spider Man Game",
       description:
-        "Marvel's Spider-Man is an action-adventure video game featuring smooth web-slinging mechanics, an open-world New York City, and a cinematic story about an experienced Peter Parker",
+        "/Marvel's Spider-Man is an action-adventure video game featuring smooth web-slinging mechanics, an open-world New York City, and a cinematic story about an experienced Peter Parker",
       image: "Spider man.jpeg",
       category: "design",
       tech: ["HTML", "CSS", "JavaScript"],
@@ -30,7 +30,7 @@ function Projects() {
       title: "Health Care App",
       description:
         "A healthcare app is a digital mobile tool designed to manage health and medical needs, commonly featuring telemedicine consultations, health data tracking, and medication reminders.",
-      image: "public/Health care.jpeg",
+      image: "Health care.jpeg",
       category: "web",
       tech: ["React", "JavaScript"],
       github: "https://github.com/bhavanaramesh28",
