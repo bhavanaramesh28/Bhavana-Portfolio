@@ -1,6 +1,11 @@
+/* ===========================
+   Projects Section
+=========================== */
+
 .projects {
   padding: 80px 8%;
   background: #f4f6f8;
+  transition: all 0.3s ease;
 }
 
 .section-title {
@@ -31,8 +36,8 @@
   background: #ffffff;
   border-radius: 15px;
   overflow: hidden;
-  transition: 0.3s;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 }
 
 .project-card:hover {
@@ -63,14 +68,14 @@
 
 .project-tags {
   display: flex;
-  gap: 10px;
   flex-wrap: wrap;
+  gap: 10px;
   margin-bottom: 20px;
 }
 
 .tag {
   background: #1b4f72;
-  color: white;
+  color: #ffffff;
   padding: 6px 14px;
   border-radius: 20px;
   font-size: 14px;
@@ -87,11 +92,12 @@
   border-radius: 8px;
   font-weight: 600;
   transition: 0.3s;
+  text-align: center;
 }
 
 .primary-btn {
   background: #1b4f72;
-  color: white;
+  color: #ffffff;
 }
 
 .primary-btn:hover {
@@ -100,14 +106,73 @@
 
 .secondary-btn {
   background: #f18f01;
-  color: white;
+  color: #ffffff;
 }
 
 .secondary-btn:hover {
   background: #d97706;
 }
 
-/* Responsive */
+/* ===========================
+   Dark Mode
+=========================== */
+
+body[data-theme="dark"] .projects {
+     background: #1c1c1c;
+}
+
+body[data-theme="dark"] .section-title {
+  color: #ffffff;
+}
+
+body[data-theme="dark"] .section-title::after {
+  background: #f18f01;
+}
+
+body[data-theme="dark"] .project-card {
+  background: #1c1c1c;
+  color: #ffffff;
+  box-shadow: 0 5px 20px rgba(255, 255, 255, 0.08);
+}
+
+body[data-theme="dark"] .project-card:hover {
+  box-shadow: 0 15px 35px rgba(255, 255, 255, 0.15);
+}
+
+body[data-theme="dark"] .project-content h3 {
+  color: #ffffff;
+}
+
+body[data-theme="dark"] .project-content p {
+  color: #d1d5db;
+}
+
+body[data-theme="dark"] .tag {
+  background: #f18f01;
+  color: #ffffff;
+}
+
+body[data-theme="dark"] .primary-btn {
+  background: #f18f01;
+  color: #ffffff;
+}
+
+body[data-theme="dark"] .primary-btn:hover {
+  background: #d97706;
+}
+
+body[data-theme="dark"] .secondary-btn {
+  background: #1c1c1c;
+  color: #ffffff;
+}
+
+body[data-theme="dark"] .secondary-btn:hover {
+  background: #555555;
+}
+
+/* ===========================
+   Responsive Design
+=========================== */
 
 @media (max-width: 768px) {
   .projects {
@@ -118,11 +183,15 @@
     font-size: 2rem;
   }
 
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
   .project-buttons {
     flex-direction: column;
   }
 
   .btn {
-    text-align: center;
+    width: 100%;
   }
 }
