@@ -1,128 +1,87 @@
-import { useState } from "react";
 import "./Projects.css";
 
+const projects = [
+  {
+    id: 1,
+    title: "Weather App",
+    image: "/WeatherApps logo.jpg",
+    description:
+      "A real-time weather application built using the OpenWeather API. It provides current weather conditions and forecasts in a simple, user-friendly interface.",
+    technologies: ["React", "API"],
+    github: "https://github.com/bhavanaramesh28",
+    demo: "#",
+  },
+  {
+    id: 2,
+    title: "Marvel Spider-Man",
+    image: "/Spider man.jpeg",
+    description:
+      "An action-adventure game inspired by Marvel's Spider-Man featuring open-world exploration, smooth gameplay, and an engaging storyline.",
+    technologies: ["React", "JavaScript"],
+    github: "https://github.com/bhavanaramesh28",
+    demo: "#",
+  },
+  {
+    id: 3,
+    title: "Health Care",
+    image: "/Health care.jpeg",
+    description:
+      "A healthcare application that helps users manage appointments, medication reminders, and health records with an easy-to-use interface.",
+    technologies: ["React", "API"],
+    github: "https://github.com/bhavanaramesh28",
+    demo: "#",
+  },
+];
+
 function Projects() {
-  const projects = [
-    {
-      id: 1,
-      title: "Weather App",
-      description:
-        "A real-time weather application built using React and OpenWeather API.",
-      image: "/WeatherApps-logo.jpg",
-      category: "web",
-      tech: ["React", "API", "CSS"],
-      github: "https://github.com/bhavanaramesh28",
-      demo: "#",
-    },
-    {
-      id: 2,
-      title: "Marvel Spider Man Game",
-      description:
-        "/Marvel's Spider-Man is an action-adventure video game featuring smooth web-slinging mechanics, an open-world New York City, and a cinematic story about an experienced Peter Parker",
-      image: "Spider man.jpeg",
-      category: "design",
-      tech: ["HTML", "CSS", "JavaScript"],
-      github: "https://github.com/bhavanaramesh28",
-      demo: "#",
-    },
-    {
-      id: 3,
-      title: "Health Care App",
-      description:
-        "A healthcare app is a digital mobile tool designed to manage health and medical needs, commonly featuring telemedicine consultations, health data tracking, and medication reminders.",
-      image: "Health care.jpeg",
-      category: "web",
-      tech: ["React", "JavaScript"],
-      github: "https://github.com/bhavanaramesh28",
-      demo: "#",
-    },
-  ];
-
-  const [filter, setFilter] = useState("all");
-
-  const filteredProjects =
-    filter === "all"
-      ? projects
-      : projects.filter((project) => project.category === filter);
-
   return (
-    <section id="projects" className="projects">
-      <div className="projects-container">
+    <section className="projects" id="projects">
+      <h2 className="section-title">My Projects</h2>
 
-        <h2>My Projects</h2>
+      <div className="projects-grid">
+        {projects.map((project) => (
+          <div className="project-card" key={project.id}>
+            <img
+              src={project.image}
+              alt={project.title}
+              className="project-image"
+            />
 
-        <p className="projects-subtitle">
-          Here are some of the projects I've worked on.
-        </p>
+            <div className="project-content">
+              <h3>{project.title}</h3>
 
-        <div className="filter-buttons">
-          <button
-            className={filter === "all" ? "active" : ""}
-            onClick={() => setFilter("all")}
-          >
-            All
-          </button>
+              <p>{project.description}</p>
 
-          <button
-            className={filter === "web" ? "active" : ""}
-            onClick={() => setFilter("web")}
-          >
-            Web
-          </button>
-
-          <button
-            className={filter === "design" ? "active" : ""}
-            onClick={() => setFilter("design")}
-          >
-            Design
-          </button>
-        </div>
-
-        <div className="projects-grid">
-          {filteredProjects.map((project) => (
-            <div className="project-card" key={project.id}>
-
-              <img
-                src="WeatherApps logo.jpg"
-                alt="project.title"
-              />
-
-              <div className="project-content">
-
-                <h3>{project.title}</h3>
-
-                <p>{project.description}</p>
-
-                <div className="tech-stack">
-                  {project.tech.map((tech, index) => (
-                    <span key={index}>{tech}</span>
-                  ))}
-                </div>
-
-                <div className="project-buttons">
-                  <a
-                    href={project.demo}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Live Demo
-                  </a>
-
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    GitHub
-                  </a>
-                </div>
-
+              <div className="project-tags">
+                {project.technologies.map((tech, index) => (
+                  <span className="tag" key={index}>
+                    {tech}
+                  </span>
+                ))}
               </div>
 
-            </div>
-          ))}
-        </div>
+              <div className="project-buttons">
+                <a
+                  href={project.demo}
+                  className="btn primary-btn"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Live Demo
+                </a>
 
+                <a
+                  href={project.github}
+                  className="btn secondary-btn"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   );
